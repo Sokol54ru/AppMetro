@@ -1,0 +1,40 @@
+﻿@using MyApplicationMetroNSK.Models
+@using MyApplicationMetroNSK.Extensions
+
+@model List<ModelWorkedTimeCard>
+@{
+    decimal totalHours = default;
+}
+
+<div class="text-center">
+    <h1>Отработанные маршруты</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>номер маршрута</th>
+                <th>день недели</th>
+                <th>рабочие часы</th>
+                <th>вечерние часы</th>
+                <th>ночные часы</th>
+                <th>разрыв в смене</th>
+                <th>месяц</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NumberTimeCard</td>
+                    <td>@item.DayOfWeek.GetDisplayName()</td>
+                    <td>@item.WorkHours</td>
+                    <td>@item.EveningHours</td>
+                    <td>@item.NightHours</td>
+                    <td>@item.ShiftGap</td>
+                    <td>@item.WorkDate.GetDisplayName()</td>
+                </tr>
+                totalHours += item.WorkHours;
+            }
+        </tbody>
+    </table>
+    <p>всего отработал часов  @Math.Round(totalHours, 1)</p>
+</div>

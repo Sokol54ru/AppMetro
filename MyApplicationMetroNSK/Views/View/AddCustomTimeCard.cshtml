@@ -1,0 +1,70 @@
+﻿@using MyApplicationMetroNSK.Data.Models
+@using MyApplicationMetroNSK.Extensions
+
+@model ModelWorkedTimeCard
+
+<div class="container mt-4">
+    <h2>Time Card Entry</h2>
+    <form asp-controller="TimeCard" asp-action="SaveCustomTimeCard" method="post" class="needs-validation" novalidate>
+        <!-- NumberTimeCard -->
+        <div class="form-group">
+            <label for="NumberTimeCard">Номер маршрута:</label>
+            <input type="text" id="NumberTimeCard" asp-for="NumberTimeCard" class="form-control" placeholder="Введи номер маршрута" required />
+            <span asp-validation-for="NumberTimeCard" class="text-danger"></span>
+        </div>
+
+        <!-- StartTime -->
+        <div class="form-group">
+            <label for="StartTime">Начало смены:</label>
+            <input type="time" id="StartTime" asp-for="StartTime" class="form-control" required />
+            <span asp-validation-for="StartTime" class="text-danger"></span>
+        </div>
+
+        <!-- EndTime -->
+        <div class="form-group">
+            <label for="EndTime">Конец смены:</label>
+            <input type="time" id="EndTime" asp-for="EndTime" class="form-control" required />
+            <span asp-validation-for="EndTime" class="text-danger"></span>
+        </div>
+
+        <!-- WorkType -->
+        <div class="form-group">
+            <label for="WorkType">Тип работы:</label>
+            <select id="WorkType" asp-for="WorkType" class="form-control">
+                @foreach (WorkType workType in Enum.GetValues(typeof(WorkType)))
+                {
+                    <option value="@workType">@workType.GetDisplayName()</option>
+                }
+            </select>
+            <span asp-validation-for="WorkType" class="text-danger"></span>
+        </div>
+
+        <!-- DayofWeek -->
+        <div class="form-group">
+            <label for="DayofWeek">День недели:</label>
+            <select id="DayofWeek" asp-for="DayOfWeek" class="form-control">
+                @foreach (MyApplicationMetroNSK.Data.Models.DayOfWeek day in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Models.DayOfWeek)))
+                {
+                    <option value="@((int)day)">@day.GetDisplayName()</option>
+                }
+            </select>
+            <span asp-validation-for="DayOfWeek" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-2">
+            <label for="Month">Месяц:</label>
+            <select id="Month" asp-for="WorkDate" class="form-control">
+                @foreach (Month month in Enum.GetValues(typeof(Month)))
+                {
+                    <option value="@((int)month)">@month.GetDisplayName()</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

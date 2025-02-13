@@ -1,0 +1,19 @@
+﻿@using MyApplicationMetroNSK.Data.Models
+@using MyApplicationMetroNSK.Extensions
+
+@model ModelWorkedTimeCard
+
+<form asp-controller="TimeCard" asp-action="GetTimeCardsForTheSelectedMonth" method="post">
+    <label for="month">Выберите месяц:</label>
+    <div class="form-group mb-2">
+        <label for="Month">Месяц:</label>
+        <select id="Month" asp-for="WorkDate" class="form-control">
+            @foreach (Month month in Enum.GetValues(typeof(Month)))
+            {
+                <option value="@((int)month)">@month.GetDisplayName()</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Показать</button>
+</form>
