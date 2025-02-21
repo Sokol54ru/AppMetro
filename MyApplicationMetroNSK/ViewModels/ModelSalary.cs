@@ -2,16 +2,16 @@
 
 public class ModelSalary
 {
-    decimal HourlyPayment { get; set; }
-    decimal HolidayPayment { get; set; }
-    decimal EveningPayment { get; set; }
-    decimal NightPayment { get; set; }
-    decimal PaymentForQualification { get; set; }
-    decimal LongServicePay { get; set; }
-    decimal PremiumPay { get; set; }
-    decimal PaymentForGapInShift { get; set; }
-    decimal PaymentForTheRegionalCoefficient { get; set; }
-    decimal ProfessionalFees { get; set; }
-    decimal Taxes { get; set; }
-    decimal TotalSalary { get; set; }
+    public decimal HourlyPayment { get; set; }
+    public decimal HolidayPayment { get; set; }
+    public decimal EveningPayment { get; set; }
+    public decimal NightPayment { get; set; }
+    public decimal PaymentForQualification { get; set; }
+    public decimal LongServicePay { get; set; }
+    public decimal PremiumPay { get; set; }
+    public decimal PaymentForGapInShift { get; set; }
+    public decimal PaymentForTheRegionalCoefficient { get; set; }
+    public decimal ProfessionalFees { get; set; }
+    public decimal Taxes { get; set; }
+    public decimal TotalSalary { get; set; }
 }

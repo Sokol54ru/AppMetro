@@ -1,0 +1,23 @@
+﻿@using MyApplicationMetroNSK.ViewModels
+
+@model List<ModelSalary>
+
+<div class="text-center">
+    <h1>Salary</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Your salary</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TotalSalary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -89,3 +89,4 @@ C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.pdb
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.genruntimeconfig.cache
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\ref\MyApplicationMetroNSK.dll
+C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.sourcelink.json

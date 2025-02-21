@@ -19,6 +19,7 @@ services.AddDbContextFactory<AppDbContext>(optionsAction =>
 });
 
 services.AddScoped<ITimeCardService, TimeCardService>();
+services.AddScoped<ISalaryCalculationService, SalaryCalculationService>();
 services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllersWithViews();
 

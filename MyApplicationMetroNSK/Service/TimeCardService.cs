@@ -100,8 +100,6 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         return null;
     }
 
-
-
     public async Task<List<ModelWorkedTimeCard>> GetTimeCardsForTheSelectedMonth(ModelWorkedTimeCard workedTimeCard)
     {
         await using var context = dbContext.CreateDbContext();
@@ -110,9 +108,6 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
             wtc.WorkDate == workedTimeCard.WorkDate).ToListAsync();
         return mapper.Map<List<ModelWorkedTimeCard>>(workedTimeCards);
     }
-
-
-
 
 
     private decimal CalculateWorkHours(TimeSpan startTime, TimeSpan endTime)
