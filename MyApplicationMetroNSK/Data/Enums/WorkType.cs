@@ -1,17 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MyApplicationMetroNSK.Data.Models;
+namespace MyApplicationMetroNSK.Data.Enums;
 
 public enum WorkType
 {
     [Display(Name = "в день")]
-    Day = 1, 
+    Day = 1,
 
     [Display(Name = "без ночи")]
-    NoNight, 
+    NoNight,
 
     [Display(Name = "в ночь")]
-    Night, 
+    Night,
 
     [Display(Name = "с ночи")]
     Morning

@@ -56,16 +56,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1xHZXRBbGxUaW1lQ2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ALFA/source/repos/MyApplicationMetroNSK/MyApplicationMetroNSK/Views/View/GetTimeCardsForTheSelectedMonth.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1xHZXRUaW1lQ2FyZHNGb3JUaGVTZWxlY3RlZE1vbnRoLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ALFA/source/repos/MyApplicationMetroNSK/MyApplicationMetroNSK/Views/View/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ALFA/source/repos/MyApplicationMetroNSK/MyApplicationMetroNSK/Views/View/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1xQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ALFA/source/repos/MyApplicationMetroNSK/MyApplicationMetroNSK/Views/View/ViewForTheSelectedMonth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld1xWaWV3Rm9yVGhlU2VsZWN0ZWRNb250aC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ALFA/source/repos/MyApplicationMetroNSK/MyApplicationMetroNSK/Views/View/ViewGetTimeCardsForTheSelectedMonth.cshtml]

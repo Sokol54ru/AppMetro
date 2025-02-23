@@ -39,6 +39,11 @@ public class ViewController(IMapper mapper, ITimeCardService timeCardService) : 
         return View(mapper.Map<ModelWorkedTimeCard>(workedTimeCard));
     }
 
+    public IActionResult ViewForTheSelectedMonth()
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

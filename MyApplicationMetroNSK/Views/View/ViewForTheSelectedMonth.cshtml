@@ -1,22 +1,21 @@
-﻿@using MyApplicationMetroNSK.Data.Models
+﻿@using MyApplicationMetroNSK.ViewModels
 @using MyApplicationMetroNSK.Data.Enums
 @using MyApplicationMetroNSK.Extensions
 
-@model ModelWorkedTimeCard
+@model ModelSalary
 
-<form asp-controller="TimeCard" asp-action="GetTimeCardsForTheSelectedMonth" method="post">
-    <label for="month">Выберите месяц:</label>
+<form asp-controller="Salary" asp-action="GetSalary" method="get">
     <div class="form-group mb-2">
-        <label for="Month">Месяц:</label>
-        <select id="Month" asp-for="WorkDate" class="form-control">
+        <label for="month">Выберите месяц:</label>
+        <select id="month" name="month" class="form-control">
             @foreach (Month month in Enum.GetValues(typeof(Month)))
             {
-                <option value="@((int)month)">@month.GetDisplayName()</option>
+                <option value="@((int)month)">@(month.GetDisplayName())</option>
             }
         </select>
     </div>
 
     <button type="submit" class="btn btn-primary">Показать</button>
-    
 </form>
+
 <button onclick="window.location.href='@Url.Action("Index", "View")'" class="btn btn-success">Вернуться на главную</button>

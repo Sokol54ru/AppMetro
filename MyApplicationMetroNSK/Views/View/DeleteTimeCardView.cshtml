@@ -1,5 +1,7 @@
 ﻿@using MyApplicationMetroNSK.Data.Models
+@using MyApplicationMetroNSK.Data.Enums
 @using MyApplicationMetroNSK.Extensions
+
 @model ModelWorkedTimeCard
 
 <h1>введи маршрут для удаления</h1>
@@ -23,7 +25,7 @@
     <div class="form-group mb-2">
         <label for="WorkType">Тип работы:</label>
         <select id="WorkType" asp-for="WorkType" class="form-control">
-            @foreach (WorkType workType in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Models.WorkType)))
+            @foreach (WorkType workType in Enum.GetValues(typeof(WorkType)))
             {
                 <option value="@workType">@workType.GetDisplayName()</option>
             }
@@ -33,17 +35,13 @@
     <div class="form-group mb-2">
         <label for="DayOfWeek">День недели:</label>
         <select id="DayOfWeek" asp-for="DayOfWeek" class="form-control">
-            @foreach (MyApplicationMetroNSK.Data.Models.DayOfWeek day in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Models.DayOfWeek)))
+            @foreach (MyApplicationMetroNSK.Data.Enums.DayOfWeek day in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Enums.DayOfWeek)))
             {
                 <option value="@((int)day)">@day.GetDisplayName()</option>
             }
         </select>
     </div>
 
-    @* <div class="form-group">
-        <label for="WorkDate">Дата работы:</label>
-        <input type="number" class="form-control" id="WorkDate" name="WorkDate" value="@Model.WorkDate" required />
-    </div> *@
     <div class="form-group mb-2">
         <label for="Month">Месяц:</label>
         <select id="Month" asp-for="WorkDate" class="form-control">
@@ -54,4 +52,8 @@
         </select>
     </div>
     <button type="submit" class="btn btn-danger">Удалить</button>
+    <button onclick="location.href='@Url.Action("Index", "View")'" class="btn btn-success">вернуться на главную</button>
 </form>
+
+
+

@@ -5,6 +5,8 @@ using MyApplicationMetroNSK.Data;
 using MyApplicationMetroNSK.Data.Models;
 using MyApplicationMetroNSK.Models;
 using MyApplicationMetroNSK.Extensions;
+using MyApplicationMetroNSK.ViewModels;
+using MyApplicationMetroNSK.Data.Enums;
 
 namespace MyApplicationMetroNSK.Service;
 
@@ -109,6 +111,10 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         return mapper.Map<List<ModelWorkedTimeCard>>(workedTimeCards);
     }
 
+    //public async Task<List<ModelSalary>> GetSalaryForTheSelectedMonth(ModelSalary modelSalary)
+    //{
+    //    await using var context = dbContext.CreateDbContext()
+    //}
 
     private decimal CalculateWorkHours(TimeSpan startTime, TimeSpan endTime)
     {

@@ -1,4 +1,4 @@
-﻿using MyApplicationMetroNSK.Data.Models;
+﻿using MyApplicationMetroNSK.Data.Enums;
 
 namespace MyApplicationMetroNSK.Models;
 
@@ -8,5 +8,5 @@ public class ModelTimeCard
     public TimeSpan StartTime { get; set; }
     public TimeSpan EndTime { get; set; }
     public WorkType WorkType { get; set; }
-    public Data.Models.DayOfWeek DayofWeek { get; set; }
+    public Data.Enums.DayOfWeek DayofWeek { get; set; }
 }

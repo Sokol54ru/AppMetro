@@ -1,4 +1,6 @@
-﻿namespace MyApplicationMetroNSK.ViewModels;
+﻿using MyApplicationMetroNSK.Data.Enums;
+
+namespace MyApplicationMetroNSK.ViewModels;
 
 public class ModelSalary
 {
@@ -14,4 +16,6 @@ public class ModelSalary
     public decimal ProfessionalFees { get; set; }
     public decimal Taxes { get; set; }
     public decimal TotalSalary { get; set; }
+    public decimal FinalSalary { get; set; }
+    public Month WorkDate { get; set; }
 }

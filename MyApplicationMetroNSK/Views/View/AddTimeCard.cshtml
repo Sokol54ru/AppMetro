@@ -1,6 +1,8 @@
 ﻿@using System.Globalization
 @using MyApplicationMetroNSK.Extensions
 @using MyApplicationMetroNSK.Data.Models
+@using MyApplicationMetroNSK.Data.Enums
+
 @model ModelWorkedTimeCard
 
 @if (Model is not null)
@@ -35,7 +37,7 @@
         <div class="form-group mb-2">
             <label for="DayOfWeek">День недели:</label>
             <select id="DayOfWeek" asp-for="DayOfWeek" class="form-control">
-                @foreach (MyApplicationMetroNSK.Data.Models.DayOfWeek day in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Models.DayOfWeek)))
+                @foreach (MyApplicationMetroNSK.Data.Enums.DayOfWeek day in Enum.GetValues(typeof(MyApplicationMetroNSK.Data.Enums.DayOfWeek)))
                 {
                     <option value="@((int)day)">@day.GetDisplayName()</option>
                 }
@@ -51,7 +53,8 @@
                 }
             </select>
         </div>
-
-        <button type="submit" class="btn btn-success mb-2">Сохранить</button>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        @* <button type="submit" class="btn btn-success mb-2">Сохранить</button> *@
+        <button onclick="window.location.href='@Url.Action("Index", "View")'" class="btn btn-success">Вернуться на главную</button>
     </form>
 }

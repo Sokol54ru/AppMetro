@@ -11,7 +11,7 @@
     <button onclick="location.href='@Url.Action("GetAllTimeCard", "View")'" class="btn btn-success">Посмотреть все отработанные маршруты</button>
     <button onclick="location.href='@Url.Action("DeleteTimeCardView", "View")'" class="btn btn-danger">Удалить маршрут</button>
     <button onclick="location.href='@Url.Action("Index", "Salary")'" class="btn btn-success">Посмотреть зарплатные коэфиценты</button>
-    <button onclick="location.href='@Url.Action("GetSalary", "Salary")'" class="btn btn-success">Look salary</button>
+    <button onclick="location.href='@Url.Action("ViewForTheSelectedMonth", "View")'" class="btn btn-success">Look salary</button>  @* !!!! go on view *@
 </div>
 
 @if (TempData["SuccessMessage"] != null)
