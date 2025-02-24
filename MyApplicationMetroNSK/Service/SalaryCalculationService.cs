@@ -19,7 +19,6 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
         return mapper.Map<List<ModelDataForCalculation>>(coefficient);
     }
 
-
     public async Task<List<ModelSalary>> CalculatedSalary(Month month)  // посчитанная зарплата(норм обозвать)
     {
         await using var context = dbContext.CreateDbContext();

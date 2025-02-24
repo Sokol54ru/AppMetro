@@ -21,20 +21,8 @@ public class SalaryController(ISalaryCalculationService salaryCalculation, IDbCo
     [HttpGet]
     public async Task<IActionResult> GetSalary(Month month)
     {
-        //await using var context = dbContext.CreateDbContext();
-        //var calculateSalary = await salaryCalculation.CalculatedSalary(month);
-        //var modelSalary = await context.Salary.ToListAsync();
-        //return View(mapper.Map<List<ModelSalary>>(modelSalary));
         var salaries = await salaryCalculation.CalculatedSalary(month);
-        ViewBag.SelectedMonth = month; // Передаем выбранный месяц
+        ViewBag.SelectedMonth = month;
         return View(salaries);
     }
-
-    //[HttpGet]
-    //public async Task<IActionResult> CalculateSalary(int month)
-    //{
-    //    var result = await salaryCalculation.CalculatedSalary((Month)month);
-    //    return View(result);
-    //}
- 
 }

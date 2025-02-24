@@ -30,7 +30,7 @@ public class ViewController(IMapper mapper, ITimeCardService timeCardService) : 
 
     public IActionResult ViewGetTimeCardsForTheSelectedMonth()
     {
-        return View(); // Открывает представление для выбора месяца
+        return View();
     }
 
 

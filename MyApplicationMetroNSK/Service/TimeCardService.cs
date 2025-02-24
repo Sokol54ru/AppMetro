@@ -209,5 +209,4 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         // Если нет пересечения, возвращаем 0
         return 0;
     }
-
 }
