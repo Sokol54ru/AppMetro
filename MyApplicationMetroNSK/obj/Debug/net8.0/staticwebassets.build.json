@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d7E/vveFtB88x+9AUI47jKQ90RbMUEKEBm5fPN7A1zg=",
+  "Hash": "raStFmJDAyDby8sMhOhifLNG1AWb/ulEmNIkmRYbiR0=",
   "Source": "MyApplicationMetroNSK",
   "BasePath": "_content/MyApplicationMetroNSK",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "sbgeks8fjd",
+      "Integrity": "2PHl1uIS9vbvBtQpEjJ0gLpwgGvV3tGanjkY+pU+CJs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo1.jpg",
+      "SourceId": "MyApplicationMetroNSK",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\",
+      "BasePath": "_content/MyApplicationMetroNSK",
+      "RelativePath": "images/photo1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ne592t4v1l",
+      "Integrity": "YaaWAqz/DG/wGMox8zfKiQsUSwuePr5LtaEeLFho0cc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo2.jpg",
+      "SourceId": "MyApplicationMetroNSK",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\",
+      "BasePath": "_content/MyApplicationMetroNSK",
+      "RelativePath": "images/photo2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "okp74j9qyw",
+      "Integrity": "OD2ymucn/91ZGw40dIAoYeWS65NLR27m+Fzrnj62TRo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo3.jpg",
+      "SourceId": "MyApplicationMetroNSK",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\",
+      "BasePath": "_content/MyApplicationMetroNSK",
+      "RelativePath": "images/photo3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w44q0j6i0e",
+      "Integrity": "cKPPOGlM4IMdhATrCHth7gdWLYSX+DwCsk9clCZCySU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo4.jpg",
+      "SourceId": "MyApplicationMetroNSK",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\",
+      "BasePath": "_content/MyApplicationMetroNSK",
+      "RelativePath": "images/photo4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cueya0k1g9",
+      "Integrity": "XLYH5xcHs0fo6HMo2I/rvcPvWmpDheQUtLoZkJJLZAY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo5.jpg",
+      "SourceId": "MyApplicationMetroNSK",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\",
+      "BasePath": "_content/MyApplicationMetroNSK",
+      "RelativePath": "images/photo5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cfm1ng50hh",
+      "Integrity": "ONGG6Z+Hrk6eD6xVxB2SpLPfNF94k+bdkdPUBMMn8ts=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo5.jpg"
     },
     {
       "Identity": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\js\\site.js",
@@ -1321,51 +1426,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 17:39:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1376,7 +1436,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "2934"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1444,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"2PHl1uIS9vbvBtQpEjJ0gLpwgGvV3tGanjkY+pU+CJs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Dec 2024 17:39:25 GMT"
+          "Value": "Sat, 01 Mar 2025 14:16:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1458,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-2PHl1uIS9vbvBtQpEjJ0gLpwgGvV3tGanjkY+pU+CJs="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.sbgeks8fjd.css",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2PHl1uIS9vbvBtQpEjJ0gLpwgGvV3tGanjkY+pU+CJs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Mar 2025 14:16:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sbgeks8fjd"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2PHl1uIS9vbvBtQpEjJ0gLpwgGvV3tGanjkY+pU+CJs="
         }
       ]
     },
@@ -1481,6 +1586,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo1.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YaaWAqz/DG/wGMox8zfKiQsUSwuePr5LtaEeLFho0cc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YaaWAqz/DG/wGMox8zfKiQsUSwuePr5LtaEeLFho0cc="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo1.ne592t4v1l.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "208700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YaaWAqz/DG/wGMox8zfKiQsUSwuePr5LtaEeLFho0cc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ne592t4v1l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/photo1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YaaWAqz/DG/wGMox8zfKiQsUSwuePr5LtaEeLFho0cc="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo2.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD2ymucn/91ZGw40dIAoYeWS65NLR27m+Fzrnj62TRo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD2ymucn/91ZGw40dIAoYeWS65NLR27m+Fzrnj62TRo="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo2.okp74j9qyw.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "161544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OD2ymucn/91ZGw40dIAoYeWS65NLR27m+Fzrnj62TRo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "okp74j9qyw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/photo2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OD2ymucn/91ZGw40dIAoYeWS65NLR27m+Fzrnj62TRo="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo3.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192511"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cKPPOGlM4IMdhATrCHth7gdWLYSX+DwCsk9clCZCySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cKPPOGlM4IMdhATrCHth7gdWLYSX+DwCsk9clCZCySU="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo3.w44q0j6i0e.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "192511"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cKPPOGlM4IMdhATrCHth7gdWLYSX+DwCsk9clCZCySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:21:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w44q0j6i0e"
+        },
+        {
+          "Name": "label",
+          "Value": "images/photo3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cKPPOGlM4IMdhATrCHth7gdWLYSX+DwCsk9clCZCySU="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo4.cueya0k1g9.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114977"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLYH5xcHs0fo6HMo2I/rvcPvWmpDheQUtLoZkJJLZAY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:22:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cueya0k1g9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/photo4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLYH5xcHs0fo6HMo2I/rvcPvWmpDheQUtLoZkJJLZAY="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo4.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "114977"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XLYH5xcHs0fo6HMo2I/rvcPvWmpDheQUtLoZkJJLZAY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:22:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XLYH5xcHs0fo6HMo2I/rvcPvWmpDheQUtLoZkJJLZAY="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo5.cfm1ng50hh.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ONGG6Z+Hrk6eD6xVxB2SpLPfNF94k+bdkdPUBMMn8ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:22:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cfm1ng50hh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/photo5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ONGG6Z+Hrk6eD6xVxB2SpLPfNF94k+bdkdPUBMMn8ts="
+        }
+      ]
+    },
+    {
+      "Route": "images/photo5.jpg",
+      "AssetFile": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ONGG6Z+Hrk6eD6xVxB2SpLPfNF94k+bdkdPUBMMn8ts=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 07:22:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ONGG6Z+Hrk6eD6xVxB2SpLPfNF94k+bdkdPUBMMn8ts="
         }
       ]
     },
@@ -6263,7 +6778,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:41:43 GMT"
+          "Value": "Sat, 01 Mar 2025 14:31:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6308,7 +6823,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:41:43 GMT"
+          "Value": "Sat, 01 Mar 2025 14:31:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6353,7 +6868,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:41:43 GMT"
+          "Value": "Sat, 01 Mar 2025 14:31:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6390,7 +6905,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 11:41:43 GMT"
+          "Value": "Sat, 01 Mar 2025 14:31:05 GMT"
         },
         {
           "Name": "Cache-Control",

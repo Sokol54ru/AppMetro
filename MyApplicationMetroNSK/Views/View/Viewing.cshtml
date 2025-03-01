@@ -1,0 +1,18 @@
+﻿<div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <button onclick="location.href='@Url.Action("ViewGetTimeCardsForTheSelectedMonth", "View")'"
+            class="btn btn-success mb-3 w-75 shadow-lg rounded-3 hover-shadow">
+        ✨ Посмотреть отработанные маршруты за конкретный месяц
+    </button>
+    <button onclick="location.href='@Url.Action("GetAllTimeCard", "View")'"
+            class="btn btn-outline-success mb-3 w-75 shadow-lg rounded-3 hover-shadow">
+        📊 Посмотреть все отработанные маршруты
+    </button>
+    <button onclick="location.href='@Url.Action("GetCoefficient", "Salary")'"
+            class="btn btn-success mb-3 w-75 shadow-lg rounded-3 hover-shadow">
+        💼 Посмотреть зарплатные коэфиценты
+    </button>
+    <button onclick="location.href='@Url.Action("ViewForTheSelectedMonth", "View")'"
+            class="btn btn-outline-success w-75 shadow-lg rounded-3 hover-shadow">
+        💰 Look salary
+    </button>
+</div>

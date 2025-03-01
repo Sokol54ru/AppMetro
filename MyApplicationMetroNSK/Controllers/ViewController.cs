@@ -8,11 +8,24 @@ namespace MyApplicationMetroNSK.Controllers;
 
 public class ViewController(IMapper mapper, ITimeCardService timeCardService) : Controller
 {
-    public IActionResult Index()
+    public IActionResult Main()
     {
         return View();
     }
 
+    public IActionResult Viewing()
+    {
+        return View();
+    }
+
+    public IActionResult Addition()
+    {
+        return View();
+    }
+    public IActionResult Deletion()
+    {
+        return View();
+    }
     public IActionResult AddTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
         return View(mapper.Map<ModelWorkedTimeCard>(workedTimeCard));
@@ -35,6 +48,11 @@ public class ViewController(IMapper mapper, ITimeCardService timeCardService) : 
 
 
     public IActionResult DeleteTimeCardView(ModelWorkedTimeCard workedTimeCard)
+    {
+        return View(mapper.Map<ModelWorkedTimeCard>(workedTimeCard));
+    }
+
+    public IActionResult DeleteTimeCardsForMonthView(ModelWorkedTimeCard workedTimeCard)
     {
         return View(mapper.Map<ModelWorkedTimeCard>(workedTimeCard));
     }

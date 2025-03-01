@@ -13,6 +13,26 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo1.jpg",
+      "PackagePath": "staticwebassets\\images\\photo1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo2.jpg",
+      "PackagePath": "staticwebassets\\images\\photo2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo3.jpg",
+      "PackagePath": "staticwebassets\\images\\photo3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo4.jpg",
+      "PackagePath": "staticwebassets\\images\\photo4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\images\\photo5.jpg",
+      "PackagePath": "staticwebassets\\images\\photo5.jpg"
+    },
+    {
       "Id": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

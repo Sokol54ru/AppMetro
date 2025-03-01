@@ -82,7 +82,6 @@ C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.MyApplicationMetroNSK.props
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.MyApplicationMetroNSK.props
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplic.584A9C88.Up2Date
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.dll
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\refint\MyApplicationMetroNSK.dll
@@ -90,3 +89,4 @@ C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.genruntimeconfig.cache
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\ref\MyApplicationMetroNSK.dll
 C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\MyApplicationMetroNSK.sourcelink.json
+C:\Users\ALFA\source\repos\MyApplicationMetroNSK\MyApplicationMetroNSK\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

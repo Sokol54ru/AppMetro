@@ -1,0 +1,31 @@
+﻿@* <div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <button onclick="location.href='@Url.Action("DeleteTimeCardView", "View")'" class="btn btn-danger mb-3">
+        🗑 Удалить маршрут
+    </button>
+    <button onclick="location.href='@Url.Action("DeleteTimeCardsForMonthView", "View")'" class="btn btn-danger">
+        🗑 Удалить маршруты за месяц
+    </button>
+    <button formmethod="post" onclick="location.href='@Url.Action("DeleteAllTimeCards", "TimeCard")'" class="btn btn-danger">
+        🗑 Удалить все маршруты
+    </button>
+</div> *@
+
+
+<div class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <!-- Удаление одного маршрута -->
+    <button onclick="location.href='@Url.Action("DeleteTimeCardView", "View")'" class="btn btn-danger mb-3">
+        🗑 Удалить маршрут
+    </button>
+
+    <!-- Удаление маршрутов за месяц -->
+    <button onclick="location.href='@Url.Action("DeleteTimeCardsForMonthView", "View")'" class="btn btn-danger mb-3">
+        🗑 Удалить маршруты за месяц
+    </button>
+
+    <!-- Форма для удаления всех маршрутов -->
+    <form method="post" action="@Url.Action("DeleteAllTimeCards", "TimeCard")">
+        <button type="submit" class="btn btn-danger">
+            🗑 Удалить все маршруты
+        </button>
+    </form>
+</div>

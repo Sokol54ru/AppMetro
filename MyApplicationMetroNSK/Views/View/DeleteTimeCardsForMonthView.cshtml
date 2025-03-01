@@ -1,0 +1,30 @@
+﻿@using MyApplicationMetroNSK.Data.Models
+@using MyApplicationMetroNSK.Data.Enums
+@using MyApplicationMetroNSK.Extensions
+
+@model ModelWorkedTimeCard
+
+<h1>введи месяц для удаления</h1>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+<form asp-controller="TimeCard" asp-action="DeleteTimeCardsForMonth" method="post" class="form-inline justify-content-center">
+    <div class="form-group mb-2">
+        <label for="Month">Месяц:</label>
+        <select id="Month" name="month" asp-for="WorkDate" class="form-control">
+            @foreach (Month month in Enum.GetValues(typeof(Month)))
+            {
+                <option value="@((int)month)">@month.GetDisplayName()</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-danger">Удалить</button>
+</form>
+<button onclick="location.href='@Url.Action("Main", "View")'" class="btn btn-success">вернуться на главную</button>

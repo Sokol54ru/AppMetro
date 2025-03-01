@@ -11,9 +11,9 @@ using MyApplicationMetroNSK.ViewModels;
 
 namespace MyApplicationMetroNSK.Controllers;
 
-public class SalaryController(ISalaryCalculationService salaryCalculation, IDbContextFactory<AppDbContext> dbContext, IMapper mapper) : Controller
+public class SalaryController(ISalaryCalculationService salaryCalculation) : Controller
 {
-    public async Task<IActionResult> Index(ModelDataForCalculation dataForCalculation)
+    public async Task<IActionResult> GetCoefficient(ModelDataForCalculation dataForCalculation)
     {
         return View(await salaryCalculation.GetAllCoefficient());
     }

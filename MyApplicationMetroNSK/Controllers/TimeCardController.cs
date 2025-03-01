@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using MyApplicationMetroNSK.Data.Enums;
 using MyApplicationMetroNSK.Models;
 using MyApplicationMetroNSK.Service;
 
@@ -21,11 +22,11 @@ public class TimeCardController(ITimeCardService timeCardService) : Controller
         var result = await timeCardService.SaveTimeCard(workedTimeCard);
         if(result == null)
         {
-            ModelState.AddModelError("", $"Маршрут не найден, повтори ввод");
-            return View("AddTimeCard", new ModelWorkedTimeCard { });
+            TempData["ErrorMessage"] = "Маршрут не найден!";
+            return RedirectToAction("Main", "View");
         }
         TempData["SuccessMessage"] = "Маршрут успешно добавлен!";
-        return RedirectToAction("Index", "View");
+        return RedirectToAction("Main", "View");
     }
 
     [HttpPost]
@@ -33,7 +34,7 @@ public class TimeCardController(ITimeCardService timeCardService) : Controller
     {
         var result = await timeCardService.SaveCustomTimeCard(timeCard);
         TempData["SuccessMessage"] = "Маршрут успешно добавлен!";
-        return RedirectToAction("Index", "View");
+        return RedirectToAction("Main", "View");
     }
 
     [HttpPost]
@@ -42,11 +43,38 @@ public class TimeCardController(ITimeCardService timeCardService) : Controller
         var result = await timeCardService.DeleteTimeCard(workedTimeCard);
         if (result == null)
         {
-            ModelState.AddModelError("", $"Маршрут не найден");
-            return View("DeleteTimeCardView", workedTimeCard);
+            TempData["ErrorMessage"] = "Маршрут не найден!";
+            return RedirectToAction("Main", "View");
         }
         TempData["SuccessMessage"] = "Маршрут успешно удалён!";
-        return RedirectToAction("Index", "View");
+        return RedirectToAction("Main", "View");
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteTimeCardsForMonth(Month month)
+    {
+        var result = await timeCardService.DeleteTimeCardsForMonth(month);
+        if (result == null)
+        {
+            TempData["ErrorMessage"] = "Месяц не найден!";
+            return RedirectToAction("Main", "View");
+        }
+        TempData["SuccessMessage"] = "Месяц очищен!";
+        return RedirectToAction("Main", "View");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteAllTimeCards()
+    {
+        var result = await timeCardService.DeleteAllTimeCards();
+        if (result == null)
+        {
+            TempData["ErrorMessage"] = "Месяц не найден!";
+            return RedirectToAction("Main", "View");
+        }
+        TempData["SuccessMessage"] = "Месяц очищен!";
+        return RedirectToAction("Main", "View");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

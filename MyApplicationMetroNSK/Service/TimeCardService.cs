@@ -15,8 +15,8 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
     [HttpPost]
     public async Task<string?> SaveTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
-        await using var сontext = dbContext.CreateDbContext();
-        var existTimeCard = await сontext.TimeCards.
+        await using var context = dbContext.CreateDbContext();
+        var existTimeCard = await context.TimeCards.
             FirstOrDefaultAsync(tc =>
                 tc.NumberTimeCard == workedTimeCard.NumberTimeCard &&
                 tc.WorkType == workedTimeCard.WorkType &&
@@ -30,7 +30,7 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
                 
                 
                 var shiftGap = workHours;
-                сontext.Add(new WorkedTimeCard
+                context.Add(new WorkedTimeCard
                 {
                     NumberTimeCard = workedTimeCard.NumberTimeCard,
                     WorkType = workedTimeCard.WorkType,
@@ -41,7 +41,7 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
                     ShiftGap = (workedTimeCard.WorkType == WorkType.Night || workedTimeCard.WorkType == WorkType.Morning) ? workHours : default,
                     WorkDate = workedTimeCard.WorkDate,
                 });
-                await сontext.SaveChangesAsync();
+                await context.SaveChangesAsync();
 
                 return "save";
             }
@@ -53,26 +53,30 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
 
     public async Task<string?> SaveCustomTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
-        await using var сontext = dbContext.CreateDbContext();
+        await using var context = dbContext.CreateDbContext();
         var workHours = CalculateWorkHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
         var eveningHourse = CalculateEvningHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
         var nightHourse = CalculateNightHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
-        if (workedTimeCard.WorkType == WorkType.Night)
+        if (workHours <= 0)
+        return "Ошибка: рабочие часы рассчитаны некорректно";
+        
+        var shiftGap = (workedTimeCard.WorkType == WorkType.Night 
+                       || workedTimeCard.WorkType == WorkType.Morning)
+                       ? workHours : 0;
+
+        context.Add(new WorkedTimeCard
         {
-            var shiftGap = workHours;
-            сontext.Add(new WorkedTimeCard
-            {
-                NumberTimeCard = workedTimeCard.NumberTimeCard,
-                WorkType = workedTimeCard.WorkType,
-                DayOfWeek = workedTimeCard.DayOfWeek,
-                WorkHours = workHours,
-                EveningHours = eveningHourse,
-                NightHours = nightHourse,
-                ShiftGap = shiftGap,
-                WorkDate = workedTimeCard.WorkDate,
-            });
-            await сontext.SaveChangesAsync();
-        }
+            NumberTimeCard = workedTimeCard.NumberTimeCard,
+            WorkType = workedTimeCard.WorkType,
+            DayOfWeek = workedTimeCard.DayOfWeek,
+            WorkHours = workHours,
+            EveningHours = eveningHourse,
+            NightHours = nightHourse,
+            ShiftGap = shiftGap,
+            WorkDate = workedTimeCard.WorkDate,
+        });
+        await context.SaveChangesAsync();
+        
         return "save";
     }
 
@@ -85,9 +89,9 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
     [HttpPost]
     public async Task<string?> DeleteTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
-        await using var сontext = dbContext.CreateDbContext();
-        var existTimeCard = await сontext.WorkedTimeCards.
-            FirstOrDefaultAsync(wtc =>
+        await using var context = dbContext.CreateDbContext();
+        var existTimeCard = await context.WorkedTimeCards
+            .FirstOrDefaultAsync(wtc =>
             wtc.NumberTimeCard == workedTimeCard.NumberTimeCard &&
             wtc.DayOfWeek == workedTimeCard.DayOfWeek &&
             wtc.WorkType == workedTimeCard.WorkType &&
@@ -95,26 +99,48 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
 
         if (existTimeCard != null) 
         {
-            сontext.WorkedTimeCards.Remove(existTimeCard);
-            await сontext.SaveChangesAsync();
+            context.WorkedTimeCards.Remove(existTimeCard);
+            await context.SaveChangesAsync();
             return "маршрут удалён";
         }
         return null;
     }
+    [HttpPost]
+    public async Task<string?> DeleteTimeCardsForMonth(Month month)
+    {
+        await using var context = dbContext.CreateDbContext();
+        var existTimeCards = await context.WorkedTimeCards
+            .Where(wtc => wtc.WorkDate == month).ToListAsync();
+        if (existTimeCards.Any())
+        {
+            context.WorkedTimeCards.RemoveRange(existTimeCards);
+            await context.SaveChangesAsync();
+            return "маршруты выбранного месяца удалены";
+        }
+        return null;
+    }
 
+
+    public async Task<string?> DeleteAllTimeCards()
+    {
+        await using var context = dbContext.CreateDbContext();
+        var existTimeCards = await context.WorkedTimeCards.ToListAsync();
+        if (existTimeCards.Any())
+        {
+            context.WorkedTimeCards.RemoveRange(existTimeCards);
+            await context.SaveChangesAsync();
+            return "записи удалены";
+        }
+        return "записи не найдены";
+    }
     public async Task<List<ModelWorkedTimeCard>> GetTimeCardsForTheSelectedMonth(ModelWorkedTimeCard workedTimeCard)
     {
         await using var context = dbContext.CreateDbContext();
-        var workedTimeCards = await context.WorkedTimeCards.
-            Where(wtc =>
+        var workedTimeCards = await context.WorkedTimeCards
+            .Where(wtc =>
             wtc.WorkDate == workedTimeCard.WorkDate).ToListAsync();
         return mapper.Map<List<ModelWorkedTimeCard>>(workedTimeCards);
     }
-
-    //public async Task<List<ModelSalary>> GetSalaryForTheSelectedMonth(ModelSalary modelSalary)
-    //{
-    //    await using var context = dbContext.CreateDbContext()
-    //}
 
     private decimal CalculateWorkHours(TimeSpan startTime, TimeSpan endTime)
     {

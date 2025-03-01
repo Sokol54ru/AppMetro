@@ -1,3 +1,39 @@
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+body {
+    background-image: url('/images/photo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.8);*/ /* Белый с полупрозрачностью */
+    /*color: #333;*/ /* Тёмный текст */
+/*}*/
+
+
 html {
   font-size: 14px;
 }
@@ -19,4 +55,68 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-image: url('/images/photo2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+    color: white; /* Белый цвет для текста */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Тень для улучшения читаемости */
+}
+p {
+    font-size: 16px;
+    color: white; /* Белый цвет текста для контраста */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Тень для текста, чтобы выделять на фоне */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для улучшения контраста */
+    border-radius: 5px; /* Скругление углов */
+    margin-top: 20px;
+}
+
+label {
+    color: white; /* Белый цвет для текста */
+    font-weight: bold; /* Жирный шрифт для выделения */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Тень для улучшения читаемости */
+    font-size: 16px; /* Увеличенный размер шрифта */
+}
+
+/* Применяем полупрозрачный фон для всех блоков с контентом */
+.container, .main-container {
+  background: rgba(0, 0, 0, 0.5); /* Темный полупрозрачный фон */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Легкая тень для выделения */
+}
+
+/* Улучшение видимости текста */
+h1, h2, h3, p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень для текста */
+}
+
+/* Таблицы с полупрозрачным фоном */
+.table {
+  background-color: rgba(255, 255, 255, 0.8); /* Белый с полупрозрачностью */
+  color: #333; /* Темный текст */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Настройки для футера */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+footer a {
+  color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .container, .main-container {
+    padding: 10px; /* Меньше отступов для мобильных устройств */
+  }
 }
