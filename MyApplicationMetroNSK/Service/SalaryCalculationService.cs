@@ -10,8 +10,26 @@ using MyApplicationMetroNSK.ViewModels;
 
 namespace MyApplicationMetroNSK.Service;
 
-public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext, IMapper mapper) : ISalaryCalculationService
+public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext, 
+                                      IMapper mapper,
+                                      Lazy<ISalaryCalculationService> salaryCalculation,
+                                      ITimeCardService timeCardService) : ISalaryCalculationService
 {
+    public async Task<CombinedViewModel> GetSalaryAndWorkHoursForMonth(int month)
+    {
+        var selectedMonth = (Month)month;
+        var workedTimeCard = new ModelWorkedTimeCard { WorkDate = selectedMonth };
+        var salaries = await salaryCalculation.Value.CalculatedSalary(selectedMonth);
+        var workHours = await timeCardService.GetTimeCardsForTheSelectedMonth(workedTimeCard);
+
+        return new CombinedViewModel
+        {
+            Salaries = salaries,
+            WorkedTimeCards = workHours,
+            SelectedMonth = month
+        };
+    }
+
     public async Task<List<ModelDataForCalculation>> GetAllCoefficient()
     {
         await using var context = dbContext.CreateDbContext();
@@ -19,7 +37,7 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
         return mapper.Map<List<ModelDataForCalculation>>(coefficient);
     }
 
-    public async Task<List<ModelSalary>> CalculatedSalary(Month month)  // посчитанная зарплата(норм обозвать)
+    public async Task<List<ModelSalary>> CalculatedSalary(Month month)  
     {
         await using var context = dbContext.CreateDbContext();
 

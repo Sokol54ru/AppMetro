@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using MyApplicationMetroNSK.Data.Models;
 using MyApplicationMetroNSK.Models;
 using MyApplicationMetroNSK.Service;
 

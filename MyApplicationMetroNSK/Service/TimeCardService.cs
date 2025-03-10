@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using MyApplicationMetroNSK.Data;
 using MyApplicationMetroNSK.Data.Models;
 using MyApplicationMetroNSK.Models;
-using MyApplicationMetroNSK.Extensions;
-using MyApplicationMetroNSK.ViewModels;
 using MyApplicationMetroNSK.Data.Enums;
 
 namespace MyApplicationMetroNSK.Service;
@@ -54,29 +52,44 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
     public async Task<string?> SaveCustomTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
         await using var context = dbContext.CreateDbContext();
+
+        var timeCardExists = await context.TimeCards
+            .AnyAsync(tc => tc.NumberTimeCard == workedTimeCard.NumberTimeCard &&
+                            tc.WorkType == workedTimeCard.WorkType &&
+                            tc.DayofWeek == workedTimeCard.DayOfWeek);
+
+        if (!timeCardExists)
+        {
+            return null;
+        }
+
         var workHours = CalculateWorkHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
-        var eveningHourse = CalculateEvningHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
-        var nightHourse = CalculateNightHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
+        var eveningHours = CalculateEvningHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
+        var nightHours = CalculateNightHours(workedTimeCard.StartTime, workedTimeCard.EndTime);
+
         if (workHours <= 0)
-        return "Ошибка: рабочие часы рассчитаны некорректно";
-        
-        var shiftGap = (workedTimeCard.WorkType == WorkType.Night 
-                       || workedTimeCard.WorkType == WorkType.Morning)
+        {
+            return "Ошибка: рабочие часы рассчитаны некорректно";
+        }
+
+        var shiftGap = (workedTimeCard.WorkType == WorkType.Night || workedTimeCard.WorkType == WorkType.Morning)
                        ? workHours : 0;
 
+        // Сохраняем данные в WorkedTimeCards
         context.Add(new WorkedTimeCard
         {
             NumberTimeCard = workedTimeCard.NumberTimeCard,
             WorkType = workedTimeCard.WorkType,
             DayOfWeek = workedTimeCard.DayOfWeek,
             WorkHours = workHours,
-            EveningHours = eveningHourse,
-            NightHours = nightHourse,
+            EveningHours = eveningHours,
+            NightHours = nightHours,
             ShiftGap = shiftGap,
             WorkDate = workedTimeCard.WorkDate,
         });
+
         await context.SaveChangesAsync();
-        
+
         return "save";
     }
 
@@ -86,6 +99,7 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         var workedTimeCard =  await context.WorkedTimeCards.ToListAsync();
         return mapper.Map<List<ModelWorkedTimeCard>>(workedTimeCard);
     }
+
     [HttpPost]
     public async Task<string?> DeleteTimeCard(ModelWorkedTimeCard workedTimeCard)
     {
@@ -105,6 +119,7 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         }
         return null;
     }
+
     [HttpPost]
     public async Task<string?> DeleteTimeCardsForMonth(Month month)
     {
@@ -120,7 +135,6 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         return null;
     }
 
-
     public async Task<string?> DeleteAllTimeCards()
     {
         await using var context = dbContext.CreateDbContext();
@@ -133,6 +147,7 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
         }
         return "записи не найдены";
     }
+
     public async Task<List<ModelWorkedTimeCard>> GetTimeCardsForTheSelectedMonth(ModelWorkedTimeCard workedTimeCard)
     {
         await using var context = dbContext.CreateDbContext();
@@ -215,7 +230,6 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
             // Считаем часы ПОСЛЕ полуночи (например, 00:00 - 06:00)
             totalHours += CalculateOverlap(startTime, endTime, TimeSpan.Zero, rangeEnd);
         }
-
         return Math.Round(totalHours, 1);
     }
 
@@ -231,7 +245,6 @@ public class TimeCardService (IDbContextFactory<AppDbContext> dbContext, IMapper
             // Возвращаем пересечение в часах, приводим к decimal
             return (decimal)(effectiveEnd - effectiveStart).TotalHours;
         }
-
         // Если нет пересечения, возвращаем 0
         return 0;
     }

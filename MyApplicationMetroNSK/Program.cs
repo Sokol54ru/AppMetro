@@ -20,6 +20,9 @@ services.AddDbContextFactory<AppDbContext>(optionsAction =>
 
 services.AddScoped<ITimeCardService, TimeCardService>();
 services.AddScoped<ISalaryCalculationService, SalaryCalculationService>();
+services.AddScoped(provider =>
+    new Lazy<ISalaryCalculationService>(() => provider.GetRequiredService<ISalaryCalculationService>())
+    );
 services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllersWithViews();
 

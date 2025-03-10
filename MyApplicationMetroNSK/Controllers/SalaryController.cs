@@ -1,11 +1,5 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using MyApplicationMetroNSK.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyApplicationMetroNSK.Data.Enums;
-using MyApplicationMetroNSK.Models;
 using MyApplicationMetroNSK.Service;
 using MyApplicationMetroNSK.ViewModels;
 
@@ -24,5 +18,12 @@ public class SalaryController(ISalaryCalculationService salaryCalculation) : Con
         var salaries = await salaryCalculation.CalculatedSalary(month);
         ViewBag.SelectedMonth = month;
         return View(salaries);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetWorkedTimeCardForTheSelectedMonth(int month)
+    {
+        var viewModel = await salaryCalculation.GetSalaryAndWorkHoursForMonth(month);
+        return View(viewModel);
     }
 }

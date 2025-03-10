@@ -1,0 +1,61 @@
+﻿@using MyApplicationMetroNSK.ViewModels
+@using MyApplicationMetroNSK.Extensions
+@using MyApplicationMetroNSK.Data.Enums
+@using MyApplicationMetroNSK.Models
+
+@model CombinedViewModel
+
+<div class="text-center">
+    <h1>Итого за @(((Month)Model.SelectedMonth).GetDisplayName())</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Зарплата</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Salaries)
+            {
+                <tr>
+                    <td>@item.FinalSalary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <h2>Отработанные маршруты</h2>
+    @{
+        decimal totalHours = 0;
+    }
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>номер маршрута</th>
+                <th>день недели</th>
+                <th>рабочие часы</th>
+                <th>вечерние часы</th>
+                <th>ночные часы</th>
+                <th>разрыв в смене</th>
+                <th>месяц</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.WorkedTimeCards)
+            {
+                <tr>
+                    <td>@item.NumberTimeCard</td>
+                    <td>@item.DayOfWeek.GetDisplayName()</td>
+                    <td>@item.WorkHours</td>
+                    <td>@item.EveningHours</td>
+                    <td>@item.NightHours</td>
+                    <td>@item.ShiftGap</td>
+                    <td>@item.WorkDate.GetDisplayName()</td>
+                </tr>
+                totalHours += item.WorkHours;
+            }
+        </tbody>
+    </table>
+    <p>Всего отработал часов: @Math.Round(totalHours, 1)</p>
+</div>
+
+<button onclick="window.location.href='@Url.Action("Main", "View")'" class="btn btn-success">Вернуться на главную</button>
