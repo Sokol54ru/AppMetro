@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MyApplicationMetroNSK.Models;
 using MyApplicationMetroNSK.Service;
+using MyApplicationMetroNSK.ViewModels;
 
 namespace MyApplicationMetroNSK.Controllers;
 
@@ -44,7 +45,10 @@ public class ViewController(IMapper mapper, ITimeCardService timeCardService) : 
     {
         return View();
     }
-
+    public IActionResult ViewChangeCoefficients(ModelDataForCalculation modelData)
+    {
+        return View(mapper.Map<ModelDataForCalculation>(modelData));
+    }
 
     public IActionResult DeleteTimeCardView(ModelWorkedTimeCard workedTimeCard)
     {

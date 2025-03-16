@@ -44,13 +44,14 @@
 
     <div class="form-group mb-2">
         <label for="Month">Месяц:</label>
-        <select id="Month" asp-for="WorkDate" class="form-control">
-            @for (int i = 1; i <= 12; i++)
+        <select id="Month" name="month" asp-for="WorkDate" class="form-control">
+            @foreach (Month month in Enum.GetValues(typeof(Month)))
             {
-                <option value="@i">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)</option>
+                <option value="@((int)month)">@month.GetDisplayName()</option>
             }
         </select>
     </div>
+
     <button type="submit" class="btn btn-danger">Удалить</button>
     <button onclick="location.href='@Url.Action("Main", "View")'" class="btn btn-success">вернуться на главную</button>
 </form>

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
 using MyApplicationMetroNSK.Data;
 using MyApplicationMetroNSK.Data.Enums;
 using MyApplicationMetroNSK.Data.Models;
@@ -29,6 +28,51 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
             SelectedMonth = month
         };
     }
+
+    public async Task<ModelDataForCalculation> ChangeCoefficients(ModelDataForCalculation modelData)
+    {
+        await using var context = dbContext.CreateDbContext();
+
+        // Получаем существующую запись
+        var coefficient = await context.DataForCalculation.FirstOrDefaultAsync();
+        if (coefficient == null)
+        {
+            throw new InvalidOperationException("Данные не найдены в базе.");
+        }
+
+        // Изменяем только нужные поля
+        coefficient.TariffRate = modelData.TariffRate;
+        coefficient.Qualification = modelData.Qualification;
+        coefficient.LengthOfService = modelData.LengthOfService;
+
+        // Сохраняем изменения
+        await context.SaveChangesAsync();
+
+        // Возвращаем обновленные данные
+        return new ModelDataForCalculation
+        {
+            TariffRate = coefficient.TariffRate,
+            Qualification = coefficient.Qualification,
+            LengthOfService = coefficient.LengthOfService
+        };
+    }
+
+
+    //public async Task ChangeCoefficients(ModelDataForCalculation modelData)
+    //{
+    //    await using var context = dbContext.CreateDbContext();
+    //    var coefficient = await context.DataForCalculation.FirstOrDefaultAsync();
+    //    if (coefficient == null)
+    //    {
+    //        throw new InvalidOperationException("Данные не найдены в базе.");
+    //    }
+
+    //    coefficient.TariffRate = modelData.TariffRate;
+    //    coefficient.Qualification = modelData.Qualification;
+    //    coefficient.LengthOfService = modelData.LengthOfService;
+
+    //    await context.SaveChangesAsync();
+    //}
 
     public async Task<List<ModelDataForCalculation>> GetAllCoefficient()
     {
@@ -114,15 +158,17 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
                 Taxes = taxes,
                 ProfessionalFees = professionalFees
             };
-
             await context.Salary.AddAsync(newSalary);
         }
-
         await context.SaveChangesAsync();
-
         var salary = await context.Salary.ToListAsync();
         return mapper.Map<List<ModelSalary>>(salary);
     }
+
+    //public async Task<IActionResult> ChangeCoefficients()
+    //{
+
+    //}
 
     private decimal CalculateWorkHours(DataForCalculationModel data) => 
         Math.Round(data.TimeCards!.Select(x => x.WorkHours).Sum() * data.Coefficient!.TariffRate, 2);
