@@ -57,23 +57,6 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
         };
     }
 
-
-    //public async Task ChangeCoefficients(ModelDataForCalculation modelData)
-    //{
-    //    await using var context = dbContext.CreateDbContext();
-    //    var coefficient = await context.DataForCalculation.FirstOrDefaultAsync();
-    //    if (coefficient == null)
-    //    {
-    //        throw new InvalidOperationException("Данные не найдены в базе.");
-    //    }
-
-    //    coefficient.TariffRate = modelData.TariffRate;
-    //    coefficient.Qualification = modelData.Qualification;
-    //    coefficient.LengthOfService = modelData.LengthOfService;
-
-    //    await context.SaveChangesAsync();
-    //}
-
     public async Task<List<ModelDataForCalculation>> GetAllCoefficient()
     {
         await using var context = dbContext.CreateDbContext();
@@ -164,11 +147,6 @@ public class SalaryCalculationService(IDbContextFactory<AppDbContext> dbContext,
         var salary = await context.Salary.ToListAsync();
         return mapper.Map<List<ModelSalary>>(salary);
     }
-
-    //public async Task<IActionResult> ChangeCoefficients()
-    //{
-
-    //}
 
     private decimal CalculateWorkHours(DataForCalculationModel data) => 
         Math.Round(data.TimeCards!.Select(x => x.WorkHours).Sum() * data.Coefficient!.TariffRate, 2);

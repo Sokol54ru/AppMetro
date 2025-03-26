@@ -1,1 +1,56 @@
-.vs
+# Исключаем сборочные папки
+bin/
+obj/
+
+# Папка с файлами, созданными при публикации
+publish/
+
+# Исключаем пакеты NuGet, так как они восстанавливаются через NuGet Package Manager
+*.nupkg
+# Исключаем кешированные NuGet файлы
+.nuget/
+packages/
+
+# Исключаем пользовательские файлы Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Исключаем файлы конфигурации, которые могут содержать персональные настройки
+*.csproj.user
+*.vbproj.user
+*.dbmdl
+
+# Исключаем файлы логов
+*.log
+
+# Исключаем файлы временных данных
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Исключаем файлы, генерируемые Node.js (если используются, например, для client-side разработки)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Исключаем файлы тестовых результатов
+TestResults/
+*.trx
+
+# Исключаем файлы кэша
+*.cache
+
+# Исключаем файлы, связанные с Docker (если используются)
+docker-compose.override.yml
+docker-compose.*.yml
+.env
+
+# Исключаем статические файлы библиотек (если вы их восстанавливаете через LibMan)
+wwwroot/lib/
+
+# Исключаем временные файлы, генерируемые системой
+Thumbs.db
+Desktop.ini
