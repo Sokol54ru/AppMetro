@@ -2847,11 +2847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
+      "projectUniqueName": "C:\\Users\\ALFA\\source\\repos\\TestGitSLite\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
       "projectName": "MyApplicationMetroNSK",
-      "projectPath": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
+      "projectPath": "C:\\Users\\ALFA\\source\\repos\\TestGitSLite\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
       "packagesPath": "C:\\Users\\ALFA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\obj\\",
+      "outputPath": "C:\\Users\\ALFA\\source\\repos\\TestGitSLite\\MyApplicationMetroNSK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

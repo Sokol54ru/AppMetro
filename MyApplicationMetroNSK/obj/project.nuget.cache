@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R76Xk4/KHEg=",
+  "dgSpecHash": "R5gG8OnbxuI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALFA\\source\\repos\\MyApplicationMetroNSK\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
+  "projectFilePath": "C:\\Users\\ALFA\\source\\repos\\TestGitSLite\\MyApplicationMetroNSK\\MyApplicationMetroNSK.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALFA\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ALFA\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
