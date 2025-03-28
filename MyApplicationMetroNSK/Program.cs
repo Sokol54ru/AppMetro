@@ -8,14 +8,22 @@ var configuration = builder.Configuration;
 var services = builder.Services;
 
 var connectionString = configuration.GetConnectionString("connectionDB");
+var connectionSqLite = configuration.GetConnectionString("DBSqlLiteConnectionString");
 
 services.AddDbContextFactory<AppDbContext>(optionsAction =>
 {
-    if (string.IsNullOrWhiteSpace(connectionString))
+    //if (string.IsNullOrWhiteSpace(connectionString))
+    //{
+    //    throw new ArgumentNullException(nameof(connectionString), "Database connection string is empty");
+    //}
+    if (!string.IsNullOrEmpty(connectionString))
     {
-        throw new ArgumentNullException(nameof(connectionString), "Database connection string is empty");
+        optionsAction.UseSqlServer(connectionString, sqlOptions => sqlOptions.EnableRetryOnFailure());
     }
-    optionsAction.UseSqlServer(connectionString, sqlOptions => sqlOptions.EnableRetryOnFailure());
+    if(!string.IsNullOrEmpty(connectionSqLite))
+    {
+        optionsAction.UseSqlite(connectionSqLite);
+    }
 });
 
 services.AddScoped<ITimeCardService, TimeCardService>();
